@@ -1,0 +1,53 @@
+.dashboard {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 16em auto;
+    position: relative;
+    // sidebar
+    .sidebar {
+        position: fixed;
+        height: 100vh;
+    }
+    // body
+    &__body {
+        display: grid;
+        grid-template-rows: 80px auto;
+        grid-gap: 2em;
+        &__sub-navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            padding: 1em 18em 1em 2em;
+            background-color: var(--white-0);
+            box-shadow: 0 0 30px var(--gray-3);
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            z-index: 9;
+            .left {
+                line-height: 30px;
+                h1 {
+                    font-size: var(--font-size-2);
+                    color: var(--black-2);
+                }
+            }
+            .right {
+                right: 18em;
+                position: absolute;
+                justify-self: flex-end;
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                justify-content: flex-end;
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
+                }
+            }
+        }
+    }
+    &__sub-routes {
+        margin-top: 7em;
+        padding: 0 2em 0 2em;
+    }
+}
